@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+* {
+    font-family: 'Courgette', sans-serif;
+}
+
+.container input:checked ~ label {
+    text-decoration: line-through;
+}
+
+.container input ~ label {
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 1.666em;
+    cursor: pointer;
+    font-size: 1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 0.666em;  
+}
+
+.container input:checked ~ .checkmark {
+    background-color: green;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.25em;
+    width: 1.25em;
+    background-color: #eee;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 0.455em;
+    top: 0.175em;
+    width: 0.225em;
+    height: 0.5em;
+    border: solid white;
+    border-width: 0 0.175em 0.175em 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+input[type="text"] {
+    font-size: 1em;
+    border-radius: 0.3em;
+}
+
+button {
+    font-size: 1em;
+    border-radius: 0.3em;
+    background-color: lightgreen;
+}
+
+h1 {
+    color:green
+}
+
+#wrapperList {
+    margin-top: 1em;
+}
